@@ -21,13 +21,13 @@ make integration-test
 ```
 ## Поддерживаемые методы с примерами
 
-1. Создание поста (Create)
-```curl -X POST localhost:9000/post -d '{"id":1,"body":"hello"}' ``` \
+1. Создание поста (Create) \
+```curl -X POST localhost:9000/post -d '{"id":1,"body":"hello"}' ``` 
 2. Создание комментария  
-```curl -X POST localhost:9000/comment -d '{"id":1, "postId":1, "body":"hello"}' -i```\
+```curl -X POST localhost:9000/comment -d '{"id":1, "postId":1, "body":"hello"}' -i```
 3. Запрос поста (GetById)  (Выводит json включающий в себа комментарий) \
-```curl -X GET localhost:9000/post?id=1 -i``` \
+```curl -X GET localhost:9000/post?id=1 -i``` 
 4. Обновление поста (Update) \
-```curl -X PATCH localhost:9000/post -d '{"id":1, "body":"hello2"}' -i``` \
+```curl -X PATCH localhost:9000/post -d '{"id":1, "body":"hello2"}' -i``` 
 5. Удаление поста (в том числе каскадное удаление коментариев) \
 ```curl -X DELETE localhost:9000/post?id=1 -i``` 
